@@ -1,6 +1,6 @@
-import iconredbtn from '../../assets/img/redbtn.svg'
+import iconredbtn from '../../assets/img/redbtn.svg';
+import './styles.css';
 
-import './styles.css'
 function NotificationButton() {
     return (
         <div className="swell-red-btn">
@@ -9,4 +9,4 @@ function NotificationButton() {
     )
 }
 
-export default NotificationButton
+export default NotificationButton;

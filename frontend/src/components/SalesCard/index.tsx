@@ -1,24 +1,33 @@
-import './styles.css'
-import NotificationButton from '../NotificationButton'
+import './styles.css';
+import NotificationButton from '../NotificationButton';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 function SalesCard() {
+
+    const min = new Date(new Date().setDate(new Date().getDate() - 365));
+    const max = new Date();
+
+    const [minDate, setMinDate] = useState(min);
+    const [maxDate, setMaxDate] = useState(max);
+
+
     return (
         <div className="swell-card">
             <h2 className="swell-sales-title">Vendas</h2>
             <div className="swell-form-control-container">
                 <DatePicker
-                    selected={new Date()}
-                    onChange={(date: Date) => { }}
+                    selected={minDate}
+                    onChange={(date: Date) => setMinDate(date)}
                     className="swell-form-control"
                     dateFormat="dd/MM/yyyy"
                 />
             </div>
             <div className="swell-form-control-container">
                 <DatePicker
-                    selected={new Date()}
-                    onChange={(date: Date) => { }}
+                    selected={maxDate}
+                    onChange={(date: Date) => setMaxDate(date)}
                     className="swell-form-control"
                     dateFormat="dd/MM/yyyy"
                 />
