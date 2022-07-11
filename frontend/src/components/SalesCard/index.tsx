@@ -1,15 +1,27 @@
 import './styles.css'
 import NotificationButton from '../NotificationButton'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function SalesCard() {
     return (
         <div className="swell-card">
             <h2 className="swell-sales-title">Vendas</h2>
             <div className="swell-form-control-container">
-                <input className="swell-form-control" type="text" />
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => { }}
+                    className="swell-form-control"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div className="swell-form-control-container">
-                <input className="swell-form-control" type="text" />
+                <DatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => { }}
+                    className="swell-form-control"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div>
                 <table className="swell-sales-table">
